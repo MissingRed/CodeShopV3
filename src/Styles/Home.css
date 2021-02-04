@@ -1,0 +1,153 @@
+.grid {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    grid-template-areas: "sidebar content";
+    height: 100vh;
+}
+
+.sidebar {
+    background: #101113;
+    grid-area: sidebar;
+    box-shadow: 5px 10px 400px #303233;
+    z-index: 5000;
+}
+
+.content {
+    background: #101113;
+    grid-area: content;
+    display: grid;
+    grid-template-rows: 70px .5fr 1fr;
+    color: white;
+}
+
+.navSearch {
+    padding: 15px;
+    z-index: 9000;
+}
+
+.top {
+    /* background: slateblue; */
+    display: grid;
+    padding: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+    z-index: 9000;
+}
+
+.bottom {
+    /* background: orange; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "color1 color2" "color1 color2";
+    padding: 20px;
+    padding-bottom: 30px;
+    grid-gap: 30px;
+    z-index: 9000;
+}
+
+.banner {
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.main-chip__search {
+    width: 30%;
+    background: white;
+    border-radius: 7px;
+    color: rgba(0, 0, 0, 0.507);
+    font-weight: bold;
+    font-size: small;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+.main-chip__search img {
+    width: 25px;
+}
+
+.main-chip__search_input {
+    width: calc(100% - 60px);
+    border-radius: 15px;
+    border: 0;
+    outline: none;
+    margin-left: 10px;
+}
+
+.main-chip__search_input::placeholder {
+    color: #767884;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+
+.color {
+    height: 100%;
+    cursor: pointer;
+}
+
+.img {
+    height: 85%;
+    background-color: rgb(247, 116, 55);
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    object-position: top;
+    overflow: hidden;
+}
+
+.img1 {
+    height: 100%;
+    background-color: rgb(247, 116, 55);
+    /* background-size: cover;
+    background-position: center;
+    object-fit: fill;
+    object-position: top;
+    overflow: hidden; */
+}
+
+.img1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img img {
+    width: 100%;
+    height: 100%;
+    transition: transform 2s, filter 1.5s ease-in-out;
+    transform-origin: center center;
+}
+
+.img:hover img {
+    transform: scale(1.3);
+}
+
+.text {
+    height: 15%;
+    display: flex;
+    align-items: center;
+}
+
+.color1 {
+    grid-area: color1;
+    background: #767884;
+    height: 100%;
+}
+
+.color2 {
+    grid-area: color2;
+    background: #767884;
+    height: 100%;
+}
+
+
+.color3 {
+    grid-area: color3;
+    background: #767884;
+}

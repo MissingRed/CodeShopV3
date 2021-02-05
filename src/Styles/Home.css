@@ -84,6 +84,8 @@
     outline: none;
     margin-left: 10px;
     background: var(--backgroud-grey-white);
+    color: var(--text-color-search);
+    font-weight: 600;
 }
 
 .main-chip__search_input::placeholder {

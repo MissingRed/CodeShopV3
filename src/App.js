@@ -1,15 +1,24 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Log from "./Pages/Log";
 import Home from "./Pages/Home";
+import Profile from "./Pages/Profile";
+
+import { AuthProvider } from "./Database/Auth";
+import PrivateRoute from "./Components/PrivateRoute";
 
 const App = () => {
   return (
     <>
-      <BrowserRouter>
-        <Switch>
-          <Route exact path="/" component={Home} />
-        </Switch>
-      </BrowserRouter>
+      <AuthProvider>
+        <BrowserRouter>
+          <Switch>
+            <Route exact path="/" component={Log} />
+            <PrivateRoute exact path="/Store" component={Home} />
+            <PrivateRoute exact path="/Profile" component={Profile} />
+          </Switch>
+        </BrowserRouter>
+      </AuthProvider>
     </>
   );
 };

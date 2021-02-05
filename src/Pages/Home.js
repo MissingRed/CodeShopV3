@@ -1,5 +1,7 @@
 import React from "react";
 import Sidebar from "../Components/Sidebar";
+import DarkMode from "../Components/DarkMode";
+
 import "../Styles/Home.css";
 
 const Home = () => {
@@ -19,6 +21,7 @@ const Home = () => {
                 placeholder="Search Games"
               />
             </div>
+            <DarkMode />
           </div>
           <div className="top">
             <div className="color">

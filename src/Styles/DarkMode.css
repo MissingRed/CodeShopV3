@@ -2,7 +2,13 @@
     --blue: #101113;
     --white: white;
     --grey: #4e4e4e;
+    --filter-dark: rgba(16, 17, 19, 0.9);
+    --filter-white: rgba(255, 255, 255, 0.7);
     --font-sidebar: #767884;
+    --box-shadow-dark: 5px 10px 400px #303233;
+    --box-shadow-white: 5px 10px 400px #30323367;
+    --profile-dark: #4e4e4e;
+    --profile-white: #4e4e4e23;
 }
 
 #darkMode {
@@ -33,7 +39,10 @@ body.light {
     --text-color: var(--blue);
     --backgroud-grey-white: var(--grey);
     --text-color-search: var(--white);
-    --font-weight: 500;
+    --font-weight: 400;
+    --shadow: var(--box-shadow-white);
+    --profile: var(--profile-white);
+    --filer: var(--filter-white);
     --image: url(https://firebasestorage.googleapis.com/v0/b/codeshopdata.appspot.com/o/Icons%2Fsun.svg?alt=media&token=7bbb1eaa-9878-4eeb-808f-252ec4baf7aa);
 }
 
@@ -43,7 +52,10 @@ body.dark {
     --text-color: var(--white);
     --backgroud-grey-white: var(--white);
     --text-color-search: var(--font-sidebar);
+    --shadow: var(--box-shadow-dark);
     --font-weight: 400;
+    --profile: var(--profile-dark);
+    --filer: var(--filter-dark);
     --image: url(https://firebasestorage.googleapis.com/v0/b/codeshopdata.appspot.com/o/Icons%2Fsun.svg?alt=media&token=7bbb1eaa-9878-4eeb-808f-252ec4baf7aa);
 }
 

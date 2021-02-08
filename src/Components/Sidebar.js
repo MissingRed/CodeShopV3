@@ -1,11 +1,12 @@
 import React, { useState, useContext, useRef } from "react";
 import "../Styles/Sidebar.css";
-// import app from "../Database/Base.js";
+import app from "../Database/Base.js";
 import { AuthContext } from "../Database/Auth";
 import { NavLink } from "react-router-dom";
 
 const Sidebar = () => {
   const { currentUser } = useContext(AuthContext);
+  const [openPerfil, setOpenPerfil] = useState(false);
   const [openSidebar, setOpenSidebar] = useState(false);
   const sidebarMobile = useRef();
 
@@ -76,10 +77,38 @@ const Sidebar = () => {
                         </ul>
                       </div>
                     </div>
-                    <div className="userItem1">
-                      <img src={currentUser.photoURL} alt="" />
-                      <p>{currentUser.displayName}</p>
-                      {/* <button onClick={() => app.auth().signOut()}>Cerrar Sesión</button> */}
+                    <div>
+                      {openPerfil ? (
+                        <div className="main-navbar__modal">
+                          <img
+                            src={
+                              currentUser.photoURL === null
+                                ? "Img/defaultUser_img.png"
+                                : currentUser.photoURL
+                            }
+                            alt="User"
+                            className="main-navbar__modal-user_image"
+                          />
+                          <p className="main-navbar__modal_text">
+                            {currentUser.displayName}
+                          </p>
+                          <button
+                            onClick={() => app.auth().signOut()}
+                            className="main-navbar__modal_button"
+                          >
+                            Log Out
+                          </button>
+                        </div>
+                      ) : (
+                        ""
+                      )}
+                      <div
+                        className="userItem1"
+                        onClick={() => setOpenPerfil(!openPerfil)}
+                      >
+                        <img src={currentUser.photoURL} alt="" />
+                        <p>{currentUser.displayName}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -135,10 +164,35 @@ const Sidebar = () => {
             </ul>
           </div>
         </div>
-        <div className="userItem">
-          <img src={currentUser.photoURL} alt="" />
-          <p>{currentUser.displayName}</p>
-          {/* <button onClick={() => app.auth().signOut()}>Cerrar Sesión</button> */}
+        <div className="contenedorUser">
+          {openPerfil ? (
+            <div className="main-navbar__modal1">
+              <img
+                src={
+                  currentUser.photoURL === null
+                    ? "Img/defaultUser_img.png"
+                    : currentUser.photoURL
+                }
+                alt="User"
+                className="main-navbar__modal-user_image"
+              />
+              <p className="main-navbar__modal_text">
+                {currentUser.displayName}
+              </p>
+              <button
+                onClick={() => app.auth().signOut()}
+                className="main-navbar__modal_button"
+              >
+                Log Out
+              </button>
+            </div>
+          ) : (
+            ""
+          )}
+          <div className="userItem" onClick={() => setOpenPerfil(!openPerfil)}>
+            <img src={currentUser.photoURL} alt="" />
+            <p>{currentUser.displayName}</p>
+          </div>
         </div>
       </div>
     </>

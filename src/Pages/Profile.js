@@ -26,8 +26,8 @@ const Profile = () => {
   return (
     <>
       <div>
-        <div className="grid">
-          <div className="sidebar">
+        <div className="main-home__grid">
+          <div className="main-home__sidebar">
             <Sidebar />
           </div>
           <div className="contentProfile">

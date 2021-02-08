@@ -1,18 +1,24 @@
-.grid {
+.main-home__grid {
     display: grid;
     grid-template-columns: 240px 1fr;
     grid-template-areas: "sidebar content";
     height: 100vh;
 }
 
-.sidebar {
+.main-home__sidebar {
     /* background: #101113; */
     grid-area: sidebar;
     box-shadow: var(--shadow);
     z-index: 8000;
 }
 
-.content {
+.main-home__sidebar h2 {
+    margin: 0;
+    letter-spacing: 3px;
+    font-weight: 500;
+}
+
+.main-home__content {
     /* background: #101113; */
     grid-area: content;
     display: grid;
@@ -22,15 +28,15 @@
     z-index: 5000;
 }
 
-.sombra {
+.main-home__shadow {
     z-index: 8000;
 }
 
-.items {
+.main-home__items_container {
     padding: 20px;
 }
 
-.navSearch {
+.main-home__search_grid {
     padding: 15px;
     z-index: 8000;
     display: flex;
@@ -43,7 +49,7 @@
     top: 0;
 }
 
-.top {
+.main-home__top_content {
     /* background: slateblue; */
     display: grid;
     padding: 20px;
@@ -52,7 +58,7 @@
     z-index: 7000;
 }
 
-.bottom {
+.main-home__bottom {
     /* background: orange; */
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -73,7 +79,7 @@
     object-position: top;
 }
 
-.main-chip__search {
+.main-home__search_bar-container {
     width: 30%;
     min-width: 220px;
     background: var(--backgroud-grey-white);
@@ -89,11 +95,11 @@
     backdrop-filter: saturate(120%) blur(40px); */
 }
 
-.main-chip__search img {
+.main-home__search_bar-container img {
     width: 25px;
 }
 
-.main-chip__search_input {
+.main-home__search_input {
     width: calc(100% - 60px);
     border-radius: 15px;
     border: 0;
@@ -104,18 +110,18 @@
     font-weight: 600;
 }
 
-.main-chip__search_input::placeholder {
+.main-home__search_input::placeholder {
     color: var(--text-color-search);
     font-weight: 600;
     font-family: 'Poppins', sans-serif;
 }
 
-.color {
+.main-home__top_item {
     height: 100%;
     cursor: pointer;
 }
 
-.img {
+.main-home__top_item-img {
     height: 85%;
     background-size: cover;
     background-position: center;
@@ -124,17 +130,17 @@
     overflow: hidden;
 }
 
-.img1 {
+.main-home__bottom_item-img {
     height: 100%;
 }
 
-.img1 img {
+.main-home__bottom_item-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.img img {
+.main-home__top_item-img img {
     width: 100%;
     height: 100%;
     transition: transform 2s, filter 1.5s ease-in-out;
@@ -142,24 +148,24 @@
     object-fit: cover;
 }
 
-.img:hover img {
+.main-home__top_item-img:hover img {
     transform: scale(1.3);
 }
 
-.text {
+.main-home__top_item-text {
     height: 15%;
     min-height: 50px;
     display: flex;
     align-items: center;
 }
 
-.color1 {
+.main-home__bottom_item-1 {
     grid-area: color1;
     background: #767884;
     height: 100%;
 }
 
-.color2 {
+.main-home__bottom_item-2 {
     grid-area: color2;
     background: #767884;
     height: 100%;
@@ -170,64 +176,64 @@
     background: #767884;
 }
 
-.gridItems {
+.main-home__items_container-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, 230px);
     grid-gap: 2em;
     justify-content: space-between;
 }
 
-.imgGame {
+.main-home__items_container-game_img {
     width: 230px;
     height: 300px;
 }
 
-.imgGame img {
+.main-home__items_container-game_img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.title {
+.main-home__items_container-game_title {
     font-weight: 500;
     margin-bottom: 0;
 }
 
-.image:hover {
+.main-home__items_container-game_img-image:hover {
     filter: opacity(.5);
     cursor: pointer;
 }
 
-.price {
+.main-home__items_container-game_price {
     margin-top: 0;
     font-size: 20px;
 }
 
 @media (max-width: 650px) {
-    .grid {
+    .main-home__grid {
         grid-template-columns: 1fr;
         grid-template-rows: 70px 1fr;
         grid-template-areas: "sidebar" "content";
         height: 100vh;
     }
-    .top {
+    .main-home__top_content {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr;
     }
-    .bottom {
+    .main-home__bottom {
         display: none;
     }
-    .content {
+    .main-home__content {
         grid-template-rows: 70px .5fr;
         height: auto;
     }
-    .main-chip__search {
+    .main-home__search_bar-container {
         width: 85%;
     }
-    .gridItems {
+    .main-home__items_container-grid {
         justify-content: center;
     }
-    .sidebar {
+    .main-home__sidebar {
         z-index: 9000;
     }
 }

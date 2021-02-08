@@ -58,6 +58,9 @@
         align-items: center;
         z-index: 7000;
     }
+    .topProfile {
+        z-index: 7000;
+    }
     .name, .email, .verifiacion, .conexion {
         width: 100%;
     }

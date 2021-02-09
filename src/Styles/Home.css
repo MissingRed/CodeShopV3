@@ -183,6 +183,11 @@
     justify-content: space-between;
 }
 
+.main-home__items_container-game {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
 .main-home__items_container-game_img {
     width: 230px;
     height: 300px;

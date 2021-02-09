@@ -1,3 +1,69 @@
+.data {
+    width: 100%;
+    height: 50vh;
+    display: grid;
+    grid-template-columns: .8fr 1.2fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 20px;
+    padding: 20px;
+    z-index: 9000;
+}
+
+.imgProfile {
+    /* grid-area: imgProfile; */
+    background: var(--backgroud-grey);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    padding-top: 30px;
+    border-radius: 10px;
+}
+
+.tiempo {
+    margin-top: 0;
+}
+
+.info-edit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imgProfile img {
+    border-radius: 50px;
+}
+
+.personalInfo {
+    /* grid-area: personalInfo; */
+    display: flex;
+    flex-direction: column;
+}
+
+.personalInfo p {
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.personalInfo input {
+    margin-bottom: 25px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #e3e4e6;
+    outline-color: #feb20052;
+}
+
+.progressInfo {
+    /* grid-area: progressInfo; */
+    background: var(--backgroud-grey);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.progressInfo p{
+    margin: 0;
+}
+
 .contentProfile {
     display: grid;
     grid-template-rows: 70px 1fr;
@@ -13,6 +79,25 @@
     margin: 0;
 }
 
+.verificado {
+    display: flex;
+    align-items: center;
+    background: var(--backgroud-grey);
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.verificado img {
+    width: 16px;
+    margin-left: 10px;
+}
+
+/* 
+
+
+
+
+
 .data {
     padding: 30px;
     z-index: 9000;
@@ -25,7 +110,6 @@
     border-radius: 5px;
     padding: 10px;
     margin-bottom: 30px;
-    /* border: 1px solid #e3e4e6; */
 }
 
 .name p, .email p, .verifiacion p, .conexion p {
@@ -64,4 +148,4 @@
     .name, .email, .verifiacion, .conexion {
         width: 100%;
     }
-}
+} */

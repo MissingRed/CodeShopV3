@@ -12,7 +12,7 @@ const Log = () => {
             <div className="main-log__container-top">
               <div className="main-log_container-logo">
                 <img
-                  src="Img/Logo_black.svg"
+                  src="Img/Logo.svg"
                   alt=""
                   className="main-log__container-img"
                 />

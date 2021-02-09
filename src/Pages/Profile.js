@@ -33,12 +33,63 @@ const Profile = () => {
           <div className="contentProfile">
             <div className="topProfile">
               <div>
-                <h2>Personal Information</h2>
+                <h2>Profile</h2>
               </div>
               <DarkMode />
             </div>
             <div className="data">
-              <div className="img5">
+              <div className="imgProfile">
+                <div className="img5">
+                  <img
+                    src={
+                      currentUser.photoURL === null
+                        ? "Img/defaultUser_img.png"
+                        : currentUser.photoURL
+                    }
+                    alt="User"
+                  />
+                </div>
+                <div className="info-edit">
+                  <p className="negrillaul">Last Connection</p>
+                  <p className="tiempo">
+                    {currentUser.metadata.lastSignInTime}
+                  </p>
+                </div>
+              </div>
+              <div className="personalInfo">
+                <p>Personal information</p>
+                <input
+                  type="text"
+                  name=""
+                  placeholder={currentUser.displayName}
+                />
+                <input type="email" name="" placeholder={currentUser.email} />
+                <p>Contact information</p>
+                <input type="number" placeholder="Phone Number" />
+                <div className="verifiacion">
+                  <p className="negrilla">Email Verification</p>
+                  <div>
+                    {currentUser.emailVerified === false ? (
+                      <button
+                        onClick={buttonVerified}
+                        className="main-profile__button"
+                      >
+                        <img src="Img/alert.svg" alt="Alert" />
+                        Send verification email
+                      </button>
+                    ) : (
+                      <div className="verificado">
+                        <span>Email Verified</span>
+                        <img src="Img/check-circle.svg" alt="Check" />
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+              <div className="progressInfo">
+                <p>Progress</p>
+              </div>
+              {/* <div className="img5">
                 <img
                   src={
                     currentUser.photoURL === null
@@ -84,7 +135,7 @@ const Profile = () => {
                     {currentUser.metadata.lastSignInTime}
                   </p>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import Sidebar from "../Components/Sidebar";
 import DarkMode from "../Components/DarkMode";
-
+import { Link } from "react-router-dom";
 import "../Styles/Home.css";
 
 const Home = () => {
@@ -62,7 +62,7 @@ const Home = () => {
           <div className="main-home__items_container">
             <h2>Others</h2>
             <div className="main-home__items_container-grid">
-              <div className="main-home__items_container-game">
+              <Link className="main-home__items_container-game" to="/GameView">
                 <div className="main-home__items_container-game_img">
                   <img
                     src="Img/spider.jpg"
@@ -76,7 +76,7 @@ const Home = () => {
                 <p className="main-home__items_container-game_price">
                   US$ 61.49
                 </p>
-              </div>
+              </Link>
               <div className="main-home__items_container-game">
                 <div className="main-home__items_container-game_img">
                   <img

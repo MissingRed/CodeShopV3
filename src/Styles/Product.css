@@ -1,22 +1,98 @@
-.imgFont {
+.main-game__content {
     position: relative;
     display: inline-block;
+    height: 70vh;
 }
 
-.imgFont img {
+.main-game__content_img {
     width: 100%;
     height: 70vh;
     object-fit: cover;
 }
 
-.contenidoProd {
+.main-game__info {
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.optionTheme {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 70px 1fr;
+}
+
+.darkTheme {
+    padding: 15px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 15px;
+}
+
+.main-game__shadow {
     width: 40%;
+    min-width: 450px;
+    height: 70vh;
+    padding: 50px;
+    color: white;
+    background-image: linear-gradient( 90deg, rgba(30, 38, 44, .97), rgba(30, 38, 44, .8) 50%, rgba(30, 38, 44, 0));
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.imgGame1 {
+    width: 230px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.plataformContent {
+    display: flex;
+    font-size: small;
+    align-items: center;
+}
+
+.plataformImg {
+    width: 20px;
+    margin-left: 10px;
+}
+
+.ProductOptions {
+    width: 100%;
+    height: 70px;
+    background: var(--backgroud-grey);
+}
+
+@media (max-width: 650px) {
+    .main-game__shadow {
+        width: 100%;
+    }
+}
+
+/* .main-home__content1 {
+    height: 70vh;
+}
+
+.contenidoProd {
+   
     height: 70vh;
     position: absolute;
     top: 0px;
     left: 0px;
     padding: 50px;
-    background-image: linear-gradient( 90deg, rgba(30, 38, 44, .97), rgba(30, 38, 44, .8) 50%, rgba(30, 38, 44, 0));
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   
 }
 
 .contenidoProd h3 {
@@ -24,15 +100,15 @@
 }
 
 .contenidoProd img {
-    width: 230px;
-    height: 300px;
+    width: 210px;
+    height: 280px;
 }
 
 .contenidoProd p {
     font-weight: 100;
-    width: 90%;
     font-size: 15px;
     color: white;
+    margin-bottom: 0;
 }
 
 .paid {
@@ -41,9 +117,16 @@
 }
 
 .plataform {
-    margin-top: 2rem;
+    display: flex;
+    align-items: center;
 }
 
 .plataformaDiv {
     display: flex;
 }
+
+.optionsGame {
+    width: 100%;
+    height: 70px;
+    background: var(--backgroud-grey);
+} */

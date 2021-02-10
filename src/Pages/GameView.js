@@ -1,6 +1,6 @@
 import React from "react";
 import Sidebar from "../Components/Sidebar";
-// import DarkMode from "../Components/DarkMode";
+import DarkMode from "../Components/DarkMode";
 import "../Styles/Product.css";
 import PaypalCheckoutButton from "../Components/PaypalCheckoutButton";
 
@@ -26,10 +26,33 @@ const GameView = () => {
           <Sidebar />
         </div>
         <div className="main-home__shadow">
-          <div className="main-home__content">
-            <div className="imgFont">
-              <img src="Img/font.jpg" alt="" />
-              <div className="contenidoProd">
+          <div className="main-game__content">
+            <img src="Img/font.jpg" className="main-game__content_img" alt="" />
+            <div className="main-game__info">
+              <div className="main-game__shadow">
+                <img src="Img/spider.jpg" alt="" className="imgGame1" />
+                <p>
+                  Marvel's Spider-Man: Miles Morales es un videojuego de acción
+                  y aventuras desarrollado por Insomniac Games y publicado por
+                  Sony Interactive Entertainment para PlayStation 4 y
+                  PlayStation 5.
+                </p>
+                <PaypalCheckoutButton order={order} />
+                <div className="plataformContent">
+                  <p className="plataform">PLATAFORMA:</p>
+                  <img src="Img/windows.svg" alt="" className="plataformImg" />
+                </div>
+              </div>
+              <div className="optionTheme">
+                <div className="darkTheme">
+                  <DarkMode />
+                </div>
+                <div className="logo">
+                  <img src="Img/ESRB.svg" alt="" className="esrb" />
+                </div>
+              </div>
+            </div>
+            {/* <div className="contenidoProd">
                 <img src="Img/spider.jpg" alt="" />
                 <p>
                   Marvel's Spider-Man: Miles Morales es un videojuego de acción
@@ -41,12 +64,11 @@ const GameView = () => {
                   <PaypalCheckoutButton order={order} />
                 </div>
                 <div className="plataformaDiv">
-                  <p className="plataform">PLATAFORMA:</p>
-                  {/* <img src="Img/windows.svg" alt="" /> */}
+                  <p className="plataform">PLATAFORMA: Windows</p>
                 </div>
-              </div>
-            </div>
+              </div> */}
           </div>
+          <div className="ProductOptions"></div>
         </div>
       </div>
     </>

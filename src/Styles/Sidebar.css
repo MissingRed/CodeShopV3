@@ -128,7 +128,7 @@
     padding: 10px;
     color: var(--text-color);
     background: var(--backgroud-grey);
-    border-radius: 5px;
+    /* border-radius: 5px; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -277,7 +277,7 @@
 }
 
 .contenedorUser {
-    width: 100%;    
+    width: 100%;
 }
 
 @media (max-width: 650px) {
